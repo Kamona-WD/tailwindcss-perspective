@@ -23,7 +23,6 @@ const perspectivePlugin = plugin(function ({ config, addUtilities, addBase, them
                     'translateY(var(--tw-translate-y))',
                     'rotateX(var(--tw-rotate-x)) rotateY(var(--tw-rotate-y)) rotateZ(var(--tw-rotate-z))',
                     'translateZ(var(--tw-translate-z))',
-                    // var(--tw-translate-x), var(--tw-translate-y), var(--tw-translate-z)
                     'skewX(var(--tw-skew-x))',
                     'skewY(var(--tw-skew-y))',
                     'scale3d(var(--tw-scale-x), var(--tw-scale-y), var(--tw-scale-z))',
