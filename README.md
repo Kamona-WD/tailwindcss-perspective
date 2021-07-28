@@ -1,5 +1,7 @@
 # @kamona/tailwindcss-perspective
 
+[![GitHub license](https://img.shields.io/github/license/Kamona-WD/tailwindcss-perspective)](https://github.com/Kamona-WD/tailwindcss-perspective/blob/main/LICENSE)
+
 ### A little bit of utility classes related to css 3d transform
 
 ## Installation
