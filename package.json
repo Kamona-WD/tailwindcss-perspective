@@ -1,6 +1,6 @@
 {
   "name": "@kamona/tailwindcss-perspective",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A little bit of utility classes related to css 3d transform",
   "repository": "https://github.com/kamona-wd/tailwindcss-perspective",
   "license": "MIT",
