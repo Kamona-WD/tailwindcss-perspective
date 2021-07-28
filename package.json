@@ -16,8 +16,8 @@
   "module": "./dist/tailwindcss-perspective.esm.js",
   "scripts": {
     "build": "node build",
-    "css:watch": "tailwind -i ./src/style.css -o ./examples/style.css -w",
-    "css:build": "tailwind -i ./src/style.css -o ./examples/style.css -m",
+    "css:watch": "tailwind -i ./tailwind.css -o ./examples/css/style.css -w",
+    "css:build": "tailwind -i ./tailwind.css -o ./examples/css/style.css -m",
     "deploy": "gh-pages -d examples",
     "prepublishOnly": "npm run build"
   },
