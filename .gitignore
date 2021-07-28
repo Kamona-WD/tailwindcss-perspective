@@ -1,4 +1,5 @@
 node_modules
+dist
+del
 .DS_Store
 *.local
-del

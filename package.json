@@ -12,13 +12,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "source": "src/index.js",
-  "exports": "./dist/tailwindcss-perspective.modern.js",
-  "main": "./dist/tailwindcss-perspective.cjs",
-  "module": "./dist/tailwindcss-perspective.module.js",
+  "main": "./dist/tailwindcss-perspective.cjs.js",
+  "module": "./dist/tailwindcss-perspective.esm.js",
   "scripts": {
-    "build": "microbundle",
-    "dev": "microbundle watch",
+    "build": "node build",
     "css:watch": "tailwind -i ./src/style.css -o ./examples/style.css -w",
     "css:build": "tailwind -i ./src/style.css -o ./examples/style.css -m",
     "deploy": "gh-pages -d examples",
@@ -34,9 +31,9 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.3.1",
+    "esbuild": "^0.12.16",
     "gh-pages": "^3.2.3",
     "lodash.map": "^4.6.0",
-    "microbundle": "^0.13.3",
     "postcss": "^8.3.6",
     "tailwindcss": "^2.2.7"
   }

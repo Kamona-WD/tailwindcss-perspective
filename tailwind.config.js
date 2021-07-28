@@ -9,6 +9,6 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('./dist/tailwindcss-perspective')
+    require('./dist/tailwindcss-perspective.cjs')
   ],
 }
