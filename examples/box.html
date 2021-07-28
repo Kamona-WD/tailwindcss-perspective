@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@kamona/tailwindcss-perspective - Box</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/petite-vue" defer init></script>
+  </head>
+  <body>
+    <div
+      class="flex flex-col items-center justify-center w-screen min-h-screen p-6"
+      v-scope="{ show: 'front', perspectiveOrigin: 'perspective-origin-center' }"
+    >
+      <div class="mb-10">
+        <label for="perspective-origin">Perspective origin:</label>
+        <select id="perspective-origin" v-model="perspectiveOrigin">
+          <option value="perspective-origin-center">Center</option>
+          <option value="perspective-origin-top">Top</option>
+          <option value="perspective-origin-top-right">Top Right</option>
+          <option value="perspective-origin-right">Right</option>
+          <option value="perspective-origin-bottom-right">Bottom Right</option>
+          <option value="perspective-origin-bottom">Bottom</option>
+          <option value="perspective-origin-bottom-left">Bottom Left</option>
+          <option value="perspective-origin-left">Left</option>
+          <option value="perspective-origin-top-left">Top Left</option>
+        </select>
+      </div>
+      <div class="p-10 transition-all border-2 border-black perspective-5" :class="perspectiveOrigin">
+        <div
+          :class="{ 'rotate-y-0': show == 'front', '-rotate-y-180': show == 'back', '-rotate-x-90': show == 'top', 'rotate-x-90': show == 'bottom', 'rotate-y-90': show == 'left', '-rotate-y-90': show == 'right', }"
+          class="grid items-center w-64 h-32 grid-cols-1 grid-rows-1 transition-transform duration-1000 origin-center  justify-items-center transform-style-3d md:w-80 md:h-40"
+        >
+          <div
+            class="
+              col-[1/1]
+              row-[1/1]
+              w-64
+              h-32
+              border-2 border-black
+              flex
+              items-center
+              justify-center
+              rotate-y-0
+              translate-z-8
+              bg-red-500/80
+              md:w-80 md:h-40 md:translate-z-10
+            "
+          >
+            <span class="text-2xl">Front</span>
+          </div>
+          <div
+            class="
+              col-[1/1]
+              row-[1/1]
+              w-64
+              h-32
+              border-2 border-black
+              flex
+              items-center
+              justify-center
+              rotate-y-180
+              translate-z-8
+              bg-green-500/80
+              md:w-80 md:h-40 md:translate-z-10
+            "
+          >
+            <span class="text-2xl">Back</span>
+          </div>
+          <div
+            class="
+              col-[1/1]
+              row-[1/1]
+              w-16
+              h-32
+              border-2 border-black
+              flex
+              items-center
+              justify-center
+              -rotate-y-90
+              translate-z-32
+              bg-yellow-500/80
+              md:translate-z-40 md:w-20 md:h-40
+            "
+          >
+            <span class="text-lg md:text-2xl">Left</span>
+          </div>
+          <div
+            class="
+              col-[1/1]
+              row-[1/1]
+              w-16
+              h-32
+              border-2 border-black
+              flex
+              items-center
+              justify-center
+              rotate-y-90
+              translate-z-32
+              bg-pink-500/80
+              md:translate-z-40 md:w-20 md:h-40
+            "
+          >
+            <span class="text-lg md:text-2xl">Right</span>
+          </div>
+          <div
+            class="
+              col-[1/1]
+              row-[1/1]
+              w-64
+              h-16
+              border-2 border-black
+              flex
+              items-center
+              justify-center
+              translate-z-16
+              rotate-x-90
+              bg-blue-500/80
+              md:translate-z-20 md:w-80 md:h-20
+            "
+          >
+            <span class="text-2xl">Top</span>
+          </div>
+          <div
+            class="
+              col-[1/1]
+              row-[1/1]
+              w-64
+              h-16
+              border-2 border-black
+              flex
+              items-center
+              justify-center
+              -rotate-x-90
+              translate-z-16
+              bg-purple-500/80
+              md:translate-z-20 md:w-80 md:h-20
+            "
+          >
+            <span class="text-2xl">Bottom</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-5 sm:grid-cols-3 mt-14 perspective-6">
+        <button
+          class="px-4 py-2 transition-all border-2 border-black  active:-translate-z-10 hover:-translate-z-5 hover:-rotate-z-12 hover:rotate-y-20 hover:rotate-x-20 hover:shadow-2xl"
+          @click="show = 'front'"
+          :class="show == 'front' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'"
+        >
+          Front
+        </button>
+        <button
+          class="px-4 py-2 transition-all border-2 border-black  active:-translate-z-10 hover:-translate-z-5 hover:-rotate-z-12 hover:rotate-y-20 hover:rotate-x-20 hover:shadow-2xl"
+          @click="show = 'back'"
+          :class="show == 'back' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'"
+        >
+          Back
+        </button>
+        <button
+          class="px-4 py-2 transition-all border-2 border-black  active:-translate-z-10 hover:-translate-z-5 hover:-rotate-z-12 hover:rotate-y-20 hover:rotate-x-20 hover:shadow-2xl"
+          @click="show = 'top'"
+          :class="show == 'top' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'"
+        >
+          Top
+        </button>
+        <button
+          class="px-4 py-2 transition-all border-2 border-black  active:-translate-z-10 hover:-translate-z-5 hover:-rotate-z-12 hover:rotate-y-20 hover:rotate-x-20 hover:shadow-2xl"
+          @click="show = 'bottom'"
+          :class="show == 'bottom' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'"
+        >
+          Bottom
+        </button>
+        <button
+          class="px-4 py-2 transition-all border-2 border-black  active:-translate-z-10 hover:-translate-z-5 hover:-rotate-z-12 hover:rotate-y-20 hover:rotate-x-20 hover:shadow-2xl"
+          @click="show = 'left'"
+          :class="show == 'left' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'"
+        >
+          Left
+        </button>
+        <button
+          class="px-4 py-2 transition-all border-2 border-black  active:-translate-z-10 hover:-translate-z-5 hover:-rotate-z-12 hover:rotate-y-20 hover:rotate-x-20 hover:shadow-2xl"
+          @click="show = 'right'"
+          :class="show == 'right' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'"
+        >
+          Right
+        </button>
+      </div>
+    </div>
+
+    <!-- Github link -->
+    <div class="fixed top-10 left-10 perspective-6">
+      <a
+        href="index.html"
+        class="inline-block p-4 transition-all duration-300 rounded-md  hover:bg-white hover:border-2 hover:border-black hover:drop-shadow-2xl hover:scale-150 hover:rotate-y-30 hover:rotate-x-30 hover:-rotate-z-15"
+      >
+        <span class="sr-only">Github</span>
+        <svg class="w-6 h-6 md:w-10 md:h-10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"
+          ></path>
+        </svg>
+      </a>
+    </div>
+    <!-- Home link -->
+    <div class="fixed bottom-10 left-10 perspective-6">
+      <a
+        href="index.html"
+        class="inline-block p-4 transition-all duration-300 rounded-md  hover:bg-white hover:border-2 hover:border-black hover:drop-shadow-2xl hover:scale-150 hover:rotate-y-20 hover:rotate-x-20"
+      >
+        <span class="sr-only">Home</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6 md:w-10 md:h-10"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+          />
+        </svg>
+      </a>
+    </div>
+  </body>
+</html>

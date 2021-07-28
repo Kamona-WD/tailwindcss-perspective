@@ -1,0 +1,43 @@
+{
+  "name": "@kamona/tailwindcss-perspective",
+  "version": "0.0.1",
+  "description": "A little bit of utility classes related to css 3d transform",
+  "repository": "https://github.com/kamona-wd/tailwindcss-perspective",
+  "license": "MIT",
+  "author": {
+    "name": "Ahmed Kamel",
+    "email": "ak3849909@gmail.com",
+    "url": "https://github.com/Kamona-WD"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "source": "src/index.js",
+  "exports": "./dist/tailwindcss-perspective.modern.js",
+  "main": "./dist/tailwindcss-perspective.cjs",
+  "module": "./dist/tailwindcss-perspective.module.js",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "css:watch": "tailwind -i ./src/style.css -o ./examples/style.css -w",
+    "css:build": "tailwind -i ./src/style.css -o ./examples/style.css -m",
+    "deploy": "gh-pages -d examples",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "tailwindcss",
+    "css",
+    "3d"
+  ],
+  "peerDependencies": {
+    "tailwindcss": ">=2.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "gh-pages": "^3.2.3",
+    "lodash.map": "^4.6.0",
+    "microbundle": "^0.13.3",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.7"
+  }
+}
