@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@kamona/tailwindcss-perspective - Box</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <script src="https://unpkg.com/petite-vue" defer init></script>
   </head>
   <body>
     <div
-      class="flex flex-col items-center justify-center w-screen min-h-screen p-6"
+      class="flex flex-col items-center justify-center w-full min-h-screen p-6"
       v-scope="{ show: 'front', perspectiveOrigin: 'perspective-origin-center' }"
     >
-      <div class="mb-10">
+      <div class="flex items-center mb-10 space-x-4">
         <label for="perspective-origin">Perspective origin:</label>
-        <select id="perspective-origin" v-model="perspectiveOrigin">
+        <select id="perspective-origin" v-model="perspectiveOrigin" class="border-2 border-black">
           <option value="perspective-origin-center">Center</option>
           <option value="perspective-origin-top">Top</option>
           <option value="perspective-origin-top-right">Top Right</option>
