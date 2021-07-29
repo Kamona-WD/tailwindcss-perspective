@@ -27,7 +27,7 @@
     "format": "prettier --write src examples",
     "serve": "live-server ./examples",
     "deploy": "gh-pages -d examples",
-    "predeploy": "run-c css:build format",
+    "predeploy": "run-s css:build format",
     "prepublishOnly": "npm run js:build",
     "prepare": "husky install"
   },
