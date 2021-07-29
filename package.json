@@ -2,7 +2,11 @@
   "name": "@kamona/tailwindcss-perspective",
   "version": "0.0.3",
   "description": "A little bit of utility classes related to css 3d transform",
-  "repository": "https://github.com/kamona-wd/tailwindcss-perspective",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kamona-WD/tailwindcss-perspective.git"
+  },
+  "homepage": "https://kamona-wd.github.io/tailwindcss-perspective/index.html",
   "license": "MIT",
   "author": {
     "name": "Ahmed Kamel",
@@ -15,17 +19,27 @@
   "main": "./dist/tailwindcss-perspective.cjs.js",
   "module": "./dist/tailwindcss-perspective.esm.js",
   "scripts": {
-    "build": "node build",
+    "dev": "run-p js:watch css:watch serve",
+    "js:build": "node build",
+    "js:watch": "node build --watch",
     "css:watch": "tailwind -i ./tailwind.css -o ./examples/css/style.css -w",
     "css:build": "tailwind -i ./tailwind.css -o ./examples/css/style.css -m",
+    "format": "prettier --write src examples",
+    "serve": "live-server ./examples",
     "deploy": "gh-pages -d examples",
-    "prepublishOnly": "npm run build"
+    "predeploy": "run-c css:build format",
+    "prepublishOnly": "npm run js:build",
+    "prepare": "husky install"
   },
   "keywords": [
     "tailwindcss",
     "css",
     "3d"
   ],
+  "lint-staged": {
+    "src/**/*.js": "prettier --write",
+    "examples/**/*.html": "prettier --write"
+  },
   "peerDependencies": {
     "tailwindcss": ">=2.2.0"
   },
@@ -33,8 +47,13 @@
     "autoprefixer": "^10.3.1",
     "esbuild": "^0.12.16",
     "gh-pages": "^3.2.3",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.1",
+    "live-server": "^1.2.1",
     "lodash.map": "^4.6.0",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.3.6",
+    "prettier": "^2.3.2",
     "tailwindcss": "^2.2.7"
   }
 }

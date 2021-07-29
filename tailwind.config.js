@@ -8,7 +8,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [
-    require('./dist/tailwindcss-perspective.cjs')
-  ],
+  plugins: [require('./dist/tailwindcss-perspective.cjs')],
 }

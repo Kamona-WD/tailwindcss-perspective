@@ -108,7 +108,9 @@ All default `translate-x` and `translate-y` values also available to `translate-
 
 ```html
 <div class="perspective-9">
-  <div class="w-40 h-40 p-4 bg-red-500 translate-z-20 rotate-x-30 rotate-y-35 -rotate-z-20 transform-style-3d">
+  <div
+    class="w-40 h-40 p-4 bg-red-500 translate-z-20 rotate-x-30 rotate-y-35 -rotate-z-20 transform-style-3d"
+  >
     <h2>3D transform</h2>
   </div>
 </div>

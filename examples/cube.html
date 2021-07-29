@@ -56,11 +56,24 @@
       </div>
       <div class="">
         <!-- Cube container -->
-        <div class="p-10 transition-all border-2 border-black perspective-9" :class="perspectiveOrigin">
+        <div
+          class="p-10 transition-all border-2 border-black perspective-9"
+          :class="perspectiveOrigin"
+        >
           <!-- Cube -->
           <div
             :class="[scale, skew, { 'rotate-y-0': show == 'front', '-rotate-y-180': show == 'back', '-rotate-x-90': show == 'top', 'rotate-x-90': show == 'bottom', 'rotate-y-90': show == 'left', '-rotate-y-90': show == 'right' }]"
-            class="grid w-64 h-64 grid-cols-1 grid-rows-1 transition-transform duration-1000 origin-center  transform-style-3d md:w-80 md:h-80"
+            class="
+              grid
+              w-64
+              h-64
+              grid-cols-1 grid-rows-1
+              transition-transform
+              duration-1000
+              origin-center
+              transform-style-3d
+              md:w-80 md:h-80
+            "
           >
             <div
               class="
@@ -176,42 +189,108 @@
         <!-- Faces buttons -->
         <div class="grid grid-cols-2 gap-5 sm:grid-cols-3 mt-14 perspective-6">
           <button
-            class="px-4 py-2 transition-all border-2 border-black  active:-translate-z-10 hover:-translate-z-5 hover:-rotate-z-12 hover:rotate-y-20 hover:rotate-x-20 hover:shadow-2xl"
+            class="
+              px-4
+              py-2
+              transition-all
+              border-2 border-black
+              active:-translate-z-10
+              hover:-translate-z-5
+              hover:-rotate-z-12
+              hover:rotate-y-20
+              hover:rotate-x-20
+              hover:shadow-2xl
+            "
             @click="show = 'front'"
             :class="show == 'front' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'"
           >
             Front
           </button>
           <button
-            class="px-4 py-2 transition-all border-2 border-black  active:-translate-z-10 hover:-translate-z-5 hover:-rotate-z-12 hover:rotate-y-20 hover:rotate-x-20 hover:shadow-2xl"
+            class="
+              px-4
+              py-2
+              transition-all
+              border-2 border-black
+              active:-translate-z-10
+              hover:-translate-z-5
+              hover:-rotate-z-12
+              hover:rotate-y-20
+              hover:rotate-x-20
+              hover:shadow-2xl
+            "
             @click="show = 'back'"
             :class="show == 'back' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'"
           >
             Back
           </button>
           <button
-            class="px-4 py-2 transition-all border-2 border-black  active:-translate-z-10 hover:-translate-z-5 hover:-rotate-z-12 hover:rotate-y-20 hover:rotate-x-20 hover:shadow-2xl"
+            class="
+              px-4
+              py-2
+              transition-all
+              border-2 border-black
+              active:-translate-z-10
+              hover:-translate-z-5
+              hover:-rotate-z-12
+              hover:rotate-y-20
+              hover:rotate-x-20
+              hover:shadow-2xl
+            "
             @click="show = 'top'"
             :class="show == 'top' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'"
           >
             Top
           </button>
           <button
-            class="px-4 py-2 transition-all border-2 border-black  active:-translate-z-10 hover:-translate-z-5 hover:-rotate-z-12 hover:rotate-y-20 hover:rotate-x-20 hover:shadow-2xl"
+            class="
+              px-4
+              py-2
+              transition-all
+              border-2 border-black
+              active:-translate-z-10
+              hover:-translate-z-5
+              hover:-rotate-z-12
+              hover:rotate-y-20
+              hover:rotate-x-20
+              hover:shadow-2xl
+            "
             @click="show = 'bottom'"
             :class="show == 'bottom' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'"
           >
             Bottom
           </button>
           <button
-            class="px-4 py-2 transition-all border-2 border-black  active:-translate-z-10 hover:-translate-z-5 hover:-rotate-z-12 hover:rotate-y-20 hover:rotate-x-20 hover:shadow-2xl"
+            class="
+              px-4
+              py-2
+              transition-all
+              border-2 border-black
+              active:-translate-z-10
+              hover:-translate-z-5
+              hover:-rotate-z-12
+              hover:rotate-y-20
+              hover:rotate-x-20
+              hover:shadow-2xl
+            "
             @click="show = 'left'"
             :class="show == 'left' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'"
           >
             Left
           </button>
           <button
-            class="px-4 py-2 transition-all border-2 border-black  active:-translate-z-10 hover:-translate-z-5 hover:-rotate-z-12 hover:rotate-y-20 hover:rotate-x-20 hover:shadow-2xl"
+            class="
+              px-4
+              py-2
+              transition-all
+              border-2 border-black
+              active:-translate-z-10
+              hover:-translate-z-5
+              hover:-rotate-z-12
+              hover:rotate-y-20
+              hover:rotate-x-20
+              hover:shadow-2xl
+            "
             @click="show = 'right'"
             :class="show == 'right' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'"
           >
@@ -226,10 +305,29 @@
       <a
         href="https://github.com/Kamona-WD/tailwindcss-perspective"
         target="_blank"
-        class="inline-block p-4 transition-all duration-300 rounded-md  hover:bg-white hover:border-2 hover:border-black hover:drop-shadow-2xl hover:scale-150 hover:rotate-y-30 hover:rotate-x-30 hover:-rotate-z-15"
+        class="
+          inline-block
+          p-4
+          transition-all
+          duration-300
+          rounded-md
+          hover:bg-white
+          hover:border-2
+          hover:border-black
+          hover:drop-shadow-2xl
+          hover:scale-150
+          hover:rotate-y-30
+          hover:rotate-x-30
+          hover:-rotate-z-15
+        "
       >
         <span class="sr-only">Github</span>
-        <svg class="w-6 h-6 md:w-10 md:h-10" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+        <svg
+          class="w-6 h-6 md:w-10 md:h-10"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
@@ -242,7 +340,20 @@
     <div class="fixed bottom-10 left-10 perspective-6">
       <a
         href="index.html"
-        class="inline-block p-4 transition-all duration-300 rounded-md  hover:bg-white hover:border-2 hover:border-black hover:drop-shadow-2xl hover:scale-150 hover:rotate-y-20 hover:rotate-x-20"
+        class="
+          inline-block
+          p-4
+          transition-all
+          duration-300
+          rounded-md
+          hover:bg-white
+          hover:border-2
+          hover:border-black
+          hover:drop-shadow-2xl
+          hover:scale-150
+          hover:rotate-y-20
+          hover:rotate-x-20
+        "
       >
         <span class="sr-only">Home</span>
         <svg

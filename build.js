@@ -1,17 +1,23 @@
 const esbuild = require('esbuild')
 
-esbuild.build({
+esbuild
+  .build({
+    watch: process.argv.includes('--watch'),
     entryPoints: ['src/index.js'],
     outfile: 'dist/tailwindcss-perspective.esm.js',
     bundle: true,
     platform: 'neutral',
-    minify: process.env.NODE_ENV == 'production',
-}).catch(() => process.exit(1))
+    minify: !process.argv.includes('--watch'),
+  })
+  .catch(() => process.exit(1))
 
-esbuild.build({
+esbuild
+  .build({
+    watch: process.argv.includes('--watch'),
     entryPoints: ['src/index.js'],
     outfile: 'dist/tailwindcss-perspective.cjs.js',
     bundle: true,
     platform: 'node',
-    minify: process.env.NODE_ENV == 'production',
-}).catch(() => process.exit(1))
+    minify: !process.argv.includes('--watch'),
+  })
+  .catch(() => process.exit(1))
