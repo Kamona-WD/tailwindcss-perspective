@@ -40,11 +40,11 @@ module.exports = {
 
 [**Read this tutorial to get familiar with 3d transformation in css**](https://3dtransforms.desandro.com/)
 
-##### Basic Example
+##### Basic Examples
 
 ```html
 <div class="perspective-9">
-  <div class="w-40 h-40 p-4 bg-red-500 rotate-x-30 rotate-y-35 -rotate-z-20 transform-style-3d">
+  <div class="w-40 h-40 p-4 bg-red-500 rotate-x-30 rotate-y-35 -rotate-z-20">
     <h2>3D transform</h2>
   </div>
 </div>
@@ -77,6 +77,7 @@ All default `rotate` values also available to `rotate-x`, `rotate-y`, and `rotat
 {
   rotate3d: (theme) => ({
     // default values
+    // https://tailwindcss.com/docs/rotate
       ...theme('rotate'),
       // new values
       ...{
@@ -108,13 +109,45 @@ All default `translate-x` and `translate-y` values also available to `translate-
 
 ```html
 <div class="perspective-9">
-  <div
-    class="w-40 h-40 p-4 bg-red-500 translate-z-20 rotate-x-30 rotate-y-35 -rotate-z-20 transform-style-3d"
-  >
+  <div class="w-40 h-40 p-4 bg-red-500 translate-z-20 rotate-x-30 rotate-y-35 -rotate-z-20">
     <h2>3D transform</h2>
   </div>
 </div>
 ```
+
+`transform-style-3d` class
+An element’s perspective only applies to direct descendant children. In order for subsequent children to inherit a parent’s perspective, and live in the same 3D space, the parent can pass along its perspective with `transform-style: preserve-3d`.
+
+```html
+<div class="p-20">
+  <div class="perspective-9">
+    <!-- we need to add 'transform-style-3d' class to make its child live in the same 3d space -->
+    <div class="w-40 h-40 p-4 bg-green-500 transform-style-3d rotate-x-30 rotate-y-35 -rotate-z-20">
+      <div class="flex justify-end">
+        <p
+          class="p-2 translate-x-10 -translate-y-6 border border-black shadow-xl bg-white/70 translate-z-16 -rotate-x-10 -rotate-y-30 rotate-z-20"
+        >
+          3D transform
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+Perspective origin.
+
+| Class                             | Properties                         |
+| --------------------------------- | ---------------------------------- |
+| `perspective-origin-center`       | `perspective-origin: center`       |
+| `perspective-origin-top`          | `perspective-origin: top`          |
+| `perspective-origin-top-right`    | `perspective-origin: top right`    |
+| `perspective-origin-right`        | `perspective-origin: right`        |
+| `perspective-origin-bottom-right` | `perspective-origin: bottom right` |
+| `perspective-origin-bottom`       | `perspective-origin: bottom`       |
+| `perspective-origin-bottom-left`  | `perspective-origin: bottom left`  |
+| `perspective-origin-left`         | `perspective-origin: left`         |
+| `perspective-origin-top-left`     | `perspective-origin: top-left`     |
 
 ---
 
