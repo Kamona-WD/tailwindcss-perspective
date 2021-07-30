@@ -1,6 +1,6 @@
 {
   "name": "@kamona/tailwindcss-perspective",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A little bit of utility classes related to css 3d transform",
   "repository": {
     "type": "git",
@@ -44,6 +44,7 @@
     "tailwindcss": ">=2.2.0"
   },
   "devDependencies": {
+    "@kamona/tailwindcss-perspective": "^0.1.0",
     "autoprefixer": "^10.3.1",
     "esbuild": "^0.12.16",
     "gh-pages": "^3.2.3",
