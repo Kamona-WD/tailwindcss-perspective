@@ -1,6 +1,8 @@
 # @kamona/tailwindcss-perspective
 
 [![GitHub license](https://img.shields.io/github/license/Kamona-WD/tailwindcss-perspective)](https://github.com/Kamona-WD/tailwindcss-perspective/blob/main/LICENSE)
+[![Downloads](https://img.shields.io/npm/dm/@kamona/tailwindcss-perspective.svg?sanitize=true)](https://npmcharts.com/compare/@kamona/tailwindcss-perspective?minimal=true)
+[![Version](https://img.shields.io/npm/v/@kamona/tailwindcss-perspective.svg?sanitize=true)](https://www.npmjs.com/package/@kamona/tailwindcss-perspective)
 
 ### A little bit of utility classes related to css 3d transform
 
