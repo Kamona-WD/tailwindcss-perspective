@@ -117,7 +117,7 @@ All default `translate-x` and `translate-y` values also available to `translate-
 </div>
 ```
 
-`transform-style-3d` class
+###### `transform-style-3d` class
 An element’s perspective only applies to direct descendant children. In order for subsequent children to inherit a parent’s perspective, and live in the same 3D space, the parent can pass along its perspective with `transform-style: preserve-3d`.
 
 ```html
@@ -137,7 +137,7 @@ An element’s perspective only applies to direct descendant children. In order 
 </div>
 ```
 
-Perspective origin.
+###### Perspective origin.
 
 | Class                             | Properties                         |
 | --------------------------------- | ---------------------------------- |
