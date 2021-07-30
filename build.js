@@ -7,7 +7,7 @@ esbuild
     outfile: 'dist/tailwindcss-perspective.esm.js',
     bundle: true,
     platform: 'neutral',
-    minify: !process.argv.includes('--watch'),
+    // minify: !process.argv.includes('--watch'),
   })
   .catch(() => process.exit(1))
 
@@ -18,6 +18,6 @@ esbuild
     outfile: 'dist/tailwindcss-perspective.cjs.js',
     bundle: true,
     platform: 'node',
-    minify: !process.argv.includes('--watch'),
+    // minify: !process.argv.includes('--watch'),
   })
   .catch(() => process.exit(1))
