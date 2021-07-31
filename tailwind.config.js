@@ -9,7 +9,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('./dist/tailwindcss-perspective.cjs'),
-    // require('@kamona/tailwindcss-perspective'),
+    // require('./dist/tailwindcss-perspective.cjs'),
+    require('@kamona/tailwindcss-perspective'),
   ],
 }

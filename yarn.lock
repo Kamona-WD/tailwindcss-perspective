@@ -23,10 +23,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@kamona/tailwindcss-perspective@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@kamona/tailwindcss-perspective/-/tailwindcss-perspective-0.1.0.tgz#b4cc9e0a340cc5cc736833558f3d2d609c196844"
-  integrity sha512-qFiM5N40byRJNHEzoiforqcx+1ECpyCOF7lDTgws69wwVeSVDq6PMoSah+2yN+jT0Y6XVk3ivIR2p2fg5xdMiw==
+"@kamona/tailwindcss-perspective@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@kamona/tailwindcss-perspective/-/tailwindcss-perspective-0.1.1.tgz#60f823a914439c7dcf46484119e803bcd62f2bb4"
+  integrity sha512-ayC/wnfR1EYBIc3ShDKp8oYfZTPPo1aRcEuMVI+BcoUz28bsxtEpiakS0Gc6vvXi9LjKuJillJYShMl+qGldEw==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
