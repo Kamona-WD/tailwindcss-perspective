@@ -8,7 +8,7 @@
 
 ## Installation
 
-> Note that @kamona/tailwindcss-perspective works only in `jit` mode.
+> ⚠️ Note that @kamona/tailwindcss-perspective works only in `jit` mode and not compatible with `tailwindcss v3` yet
 
 Install the plugin from npm:
 
